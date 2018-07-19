@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form method="get">
+    <input type="text" name="search">
+    <button type="submit">search</button>
+  </form>
+{%for item in items %}
+
+<!--{# <div>{{item.id.videoId}}</div> #}-->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{{item.id.videoId}}" frameborder="0" allowfullscreen></iframe>
+{%endfor%}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+
+    {% for movie in movies %}
+        <div>{{movie.title}}</div>
+        <img src="{{image_url}}/{{movie.poster_path}}" alt={{movie.title}}>
+    {% endfor %}
+
+
+    {% for item in search_items  %}
+    {%for i in item%}
+<div>
+    <iframe width="520" height="315" src="https://www.youtube.com/embed/{{i.id.videoId}}" frameborder="0" allowfullscreen></iframe>
+</div>
+    {%endfor%}
+    {%endfor%}
+</div>
+{% endblock %}

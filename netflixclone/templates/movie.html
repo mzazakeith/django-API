@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for result in results %}
+<div>{{result.title}}</div>
+<img src="{{image_url}}/{{result.poster_path}}" alt="">
+
+
+{% endfor %}
+
+{% endblock %}
